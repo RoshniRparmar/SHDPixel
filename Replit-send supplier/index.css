@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(28, 65%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Sand theme colors */
+  --sand-50: hsl(32, 100%, 97%);
+  --sand-100: hsl(36, 100%, 95%);
+  --sand-200: hsl(39, 71%, 81%);
+  --sand-300: hsl(39, 57%, 71%);
+  --sand-400: hsl(37, 57%, 69%);
+  --sand-500: hsl(28, 65%, 60%);
+  --sand-600: hsl(25, 71%, 50%);
+  --sand-700: hsl(21, 55%, 40%);
+  --sand-800: hsl(21, 62%, 27%);
+  --sand-900: hsl(20, 57%, 20%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(28, 65%, 60%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Sand theme utilities */
+.bg-sand-50 { background-color: var(--sand-50); }
+.bg-sand-100 { background-color: var(--sand-100); }
+.bg-sand-200 { background-color: var(--sand-200); }
+.bg-sand-300 { background-color: var(--sand-300); }
+.bg-sand-400 { background-color: var(--sand-400); }
+.bg-sand-500 { background-color: var(--sand-500); }
+.bg-sand-600 { background-color: var(--sand-600); }
+.bg-sand-700 { background-color: var(--sand-700); }
+.bg-sand-800 { background-color: var(--sand-800); }
+.bg-sand-900 { background-color: var(--sand-900); }
+
+.text-sand-50 { color: var(--sand-50); }
+.text-sand-100 { color: var(--sand-100); }
+.text-sand-200 { color: var(--sand-200); }
+.text-sand-300 { color: var(--sand-300); }
+.text-sand-400 { color: var(--sand-400); }
+.text-sand-500 { color: var(--sand-500); }
+.text-sand-600 { color: var(--sand-600); }
+.text-sand-700 { color: var(--sand-700); }
+.text-sand-800 { color: var(--sand-800); }
+.text-sand-900 { color: var(--sand-900); }
+
+.border-sand-100 { border-color: var(--sand-100); }
+.border-sand-200 { border-color: var(--sand-200); }
+.border-sand-300 { border-color: var(--sand-300); }
+.border-sand-400 { border-color: var(--sand-400); }
+.border-sand-500 { border-color: var(--sand-500); }
+.border-sand-600 { border-color: var(--sand-600); }
+.border-sand-700 { border-color: var(--sand-700); }
+
+.hover\:bg-sand-50:hover { background-color: var(--sand-50); }
+.hover\:bg-sand-700:hover { background-color: var(--sand-700); }
+.hover\:text-sand-800:hover { color: var(--sand-800); }
+.hover\:text-sand-900:hover { color: var(--sand-900); }
+.hover\:border-sand-400:hover { border-color: var(--sand-400); }
+.hover\:border-sand-500:hover { border-color: var(--sand-500); }
+
+.focus\:ring-sand-500:focus { --tw-ring-color: var(--sand-500); }
+
+/* Desert gradient background */
+.bg-sand-gradient {
+  background: linear-gradient(135deg, var(--sand-50) 0%, var(--sand-100) 50%, var(--sand-200) 100%);
+}
+
+/* Desert sand dunes background */
+.bg-desert-landscape {
+  background-image: 
+    radial-gradient(ellipse at 20% 80%, var(--sand-300) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, var(--sand-200) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 40%, var(--sand-100) 0%, transparent 50%),
+    linear-gradient(180deg, var(--sand-50) 0%, var(--sand-200) 100%);
+  background-size: 800px 400px, 600px 300px, 400px 200px, 100% 100%;
+  background-position: -400px 100px, 200px -100px, 0px 50px, 0 0;
+  background-repeat: no-repeat;
+}
+
+/* Desert with flowing river background */
+.bg-sand-river {
+  background-image: 
+    /* River flowing through the sand */
+    linear-gradient(45deg, transparent 40%, hsl(200, 60%, 70%) 45%, hsl(200, 80%, 60%) 50%, hsl(200, 60%, 70%) 55%, transparent 60%),
+    /* River reflections and ripples */
+    radial-gradient(ellipse at 50% 50%, hsla(200, 80%, 80%, 0.3) 0%, transparent 30%),
+    radial-gradient(ellipse at 30% 40%, hsla(200, 70%, 85%, 0.2) 0%, transparent 25%),
+    radial-gradient(ellipse at 70% 60%, hsla(200, 70%, 85%, 0.2) 0%, transparent 25%),
+    /* Sand dunes on both sides */
+    radial-gradient(ellipse at 15% 70%, var(--sand-400) 0%, var(--sand-300) 30%, transparent 50%),
+    radial-gradient(ellipse at 85% 30%, var(--sand-300) 0%, var(--sand-200) 30%, transparent 50%),
+    radial-gradient(ellipse at 10% 20%, var(--sand-200) 0%, transparent 40%),
+    radial-gradient(ellipse at 90% 80%, var(--sand-200) 0%, transparent 40%),
+    /* Base sand gradient */
+    linear-gradient(135deg, var(--sand-100) 0%, var(--sand-200) 40%, var(--sand-300) 100%);
+  background-size: 
+    100% 100%,
+    200px 100px, 150px 80px, 180px 90px,
+    600px 400px, 600px 400px,
+    400px 200px, 400px 200px,
+    100% 100%;
+  background-position: 
+    0 0,
+    50% 45%, 40% 50%, 60% 40%,
+    -200px 100px, 200px -50px,
+    -100px 80px, 100px 120px,
+    0 0;
+  background-repeat: no-repeat;
+}
